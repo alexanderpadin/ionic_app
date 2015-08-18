@@ -39,5 +39,18 @@
       </ion-reorder-button>
     </ion-item>
   </ion-list>
+
+
+<div class="row">
+  <div style="border:1px;">
+    <div class="col" ng-repeat="item in artist | filter:query" href="#/tab/list/{{item.shortname}}">
+    <img ng-src="img/{{item.shortname}}_tn.jpg" alt="{{item.name}} Photo">
+        <h5>{{item.name}}</h5>
+        <!-- <h3>{{item.reknown}}</h3> -->
+        <!-- <p>{{item.bio | limitTo:150}}{{item.bio.length > 150 ? '...' : ''}}</p></div> -->
+  </div>
+</div>
+
+
 </ion-content>
 </ion-view>
