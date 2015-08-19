@@ -56,7 +56,8 @@ angular.module('starter', ['ionic'])
       url: '/home',
       views: {
         'home-tab': {
-          templateUrl: 'templates/home.html'
+          templateUrl: 'templates/home.html',
+          controller: 'HomeController'
         }
       }
     })
@@ -64,11 +65,32 @@ angular.module('starter', ['ionic'])
   $urlRouterProvider.otherwise('/tab/home');
 })
 
+.controller('HomeController', ['$scope', '$http', '$state',
+  function($scope, $http, $state) {
+    var myLatlng = new google.maps.LatLng(43.07493,-89.381388);
+        
+        var mapOptions = {
+          center: myLatlng,
+          zoom: 16,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);      
+  }])
+
 .controller('ListController', ['$scope', '$http', '$state',
   function($scope, $http, $state) {
     $http.get('js/data.json').success(function(data) {
       $scope.artist = data.artists;
       $scope.whichartist = $state.params.aId;
+
+      $scope.images = [];
+
+        
+      for(var i = 0; i < 100; i++) {
+        $scope.images.push({id: i, src: "http://placehold.it/100x100"});
+      }
+
+
       $scope.data = {
         showReorder: false,
         showDelete: false
@@ -118,5 +140,6 @@ angular.module('starter', ['ionic'])
 
     });
   }])
+
 
 

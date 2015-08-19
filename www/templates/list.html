@@ -1,13 +1,10 @@
-<ion-view view-title="Artist List">
+<ion-view view-title="Places">
 
-  <ion-nav-buttons side="primary">
-    <button class="button button-icon ion-minus-circled icon-small" ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
-  </ion-nav-buttons>
-  
-  <ion-nav-buttons side="secondary">
-    <button class="button button-icon ion-navicon" ng-click="data.showReorder = !data.showReorder; data.showDelete = false"></button>
-  </ion-nav-buttons>
-
+<ion-nav-buttons side="secondary">
+  <button class="button button-icon ion-grid icon-small" 
+    ng-click="data.showDelete = !data.showDelete; data.showReorder = false">
+  </button>
+</ion-nav-buttons>
 
 <div class="bar bar-subheader item item-input-inset bar-light">
   <label class="item-input-wrapper">
@@ -16,41 +13,29 @@
   </label>
 </div>
 
-<ion-content class="has-subheader">
-  <ion-refresher on-refresh="doRefresh()">
-  </ion-refresher>
+<!-- <ion-content class="has-subheader">
   <ion-list show-reorder="data.showReorder" show-delete="data.showDelete">
-    <ion-item ng-class="{'star' : item.star}" 
-        ng-repeat="item in artist | filter:query" 
-        class="item-thumbnail-left item-text-wrap item-icon-right" 
-        href="#/tab/list/{{item.shortname}}">
-      <img ng-src="img/{{item.shortname}}_tn.jpg" alt="{{item.name}} Photo">
-      <h2>{{item.name}}</h2>
-      <h3>{{item.reknown}}</h3>
-      <p>{{item.bio | limitTo:150}}{{item.bio.length > 150 ? '...' : ''}}</p>
-      <button class="button button-clear icon ion-star button-assertive"
-        ng-click="toggleStar(item)" ng-show="item.star"></button>
-      <ion-option-button class="button-dark" ng-click="toggleStar(item)">
-        <i class="icon ion-star"></i>
-      </ion-option-button>
-      <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)">
-      </ion-delete-button>
-      <ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)">
-      </ion-reorder-button>
+    <ion-item ng-repeat="image in images">
+      <img ng-src="{{image.src}}" alt="{{item.name}} Photo">
+      <h3>Category</h3>
     </ion-item>
   </ion-list>
+</ion-content> -->
 
 
-<div class="row">
-  <div style="border:1px;">
-    <div class="col" ng-repeat="item in artist | filter:query" href="#/tab/list/{{item.shortname}}">
-    <img ng-src="img/{{item.shortname}}_tn.jpg" alt="{{item.name}} Photo">
-        <h5>{{item.name}}</h5>
-        <!-- <h3>{{item.reknown}}</h3> -->
-        <!-- <p>{{item.bio | limitTo:150}}{{item.bio.length > 150 ? '...' : ''}}</p></div> -->
-  </div>
-</div>
-
+<ion-content class="has-subheader">
+      <div class="row" ng-repeat="image in images" ng-if="$index % 3 === 0">
+        <div class="col col-33" ng-if="$index < images.length">
+            <img ng-src="{{images[$index].src}}" width="100%" />
+        </div>
+        <div class="col col-33" ng-if="$index + 1 < images.length">
+            <img ng-src="{{images[$index + 1].src}}" width="100%" />
+        </div>
+        <div class="col col-33" ng-if="$index + 2 < images.length">
+            <img ng-src="{{images[$index + 2].src}}" width="100%" />
+        </div>
+      </div>
 
 </ion-content>
+
 </ion-view>
