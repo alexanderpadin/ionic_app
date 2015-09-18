@@ -1,17 +1,116 @@
 #container {
 	height: 100%;
 }
-
+.scroll {
+  height: 100%;
+}
 #map {
   width: 100%;
-  height: 80%;
+  height: 100%;
+}
+
+.pane {
+    background-color: #2E2E2E;
+}
+
+#home { 
+  background-image: url('../img/bg/home.png');
+  background-repeat: no-repeat;
+  height: 150px;
+  background-size: 100%;
+  border-style: solid;
+  border-bottom-width: 5px;
+  border-color: #2E2E2E;
+}
+#club { 
+  background-image: url('../img/bg/clubs.png');
+  background-repeat: no-repeat;
+  height: 150px;
+  background-size: 100%;
+  border-style: solid;
+  border-bottom-width: 5px;
+  border-color: #2E2E2E;
+}
+#garage { 
+  background-image: url('../img/bg/garage.png');
+  background-repeat: no-repeat;
+  height: 150px;
+  background-size: 100%;
+  border-style: solid;
+  border-bottom-width: 5px;
+  border-color: #2E2E2E;
+}
+#rest { 
+  background-image: url('../img/bg/restaurant.png');
+  background-repeat: no-repeat;
+  height: 150px;
+  background-size: 100%;
+  border-style: solid;
+  border-bottom-width: 0px;
+  border-color: #2E2E2E;
+}
+#park { 
+  background-image: url('../img/bg/park.png');
+  background-repeat: no-repeat;
+  height: 150px;
+  border-style: solid;
+  border-bottom-width: 5px;
+  border-color: #2E2E2E
+}
+
+/*.custom-icon {
+  font-size: 84px;
+  color : #FFFFFF;
+}
+*/
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+    opacity: 1;
+}
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+    color: #771107;
+}
+
+/*
+Header bar color
+*/
+.bar {
+  background-color: #771107 !important;
+  border-color: #771107 !important;
+}
+
+/*
+Items colors
+*/
+.custom-color{
+    background-color:#2E2E2E !important;
+    border-color:#434343 !important;
+ }
+
+.map_pin {
+	height: 83px;
+	width: 45px;
+	position:absolute;
+	top: 50%;  /* adjust value accordingly */
+  left: 50%;
+  margin-top: -83px; /* Half the height */
+  margin-left: -22.5px;
+}
+
+.map_pin_placed {
+  height: 70px;
+  width: 45px;
+  position:absolute;
+  top: 50%;  /* adjust value accordingly */
+  left: 50%;
+  margin-top: -70px; /* Half the height */
+  margin-left: -22.5px;
 }
 
 .list_items {
 	position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-.scroll {
-  height: 100%;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -3px 15px -5px black;
+  -webkit-box-shadow: 0px -3px 15px -5px black;
+  -moz-box-shadow: 0px -3px 15px -5px black;
 }

@@ -3,29 +3,34 @@ angular.module('starter.services', [])
 .factory('Chats', function() {
   var chats = [{
     id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
+    name: 'Homes',
+    lastText: '7 Places',
+    face: 'img/icons/android-home.svg',
+    item_bg: 'home'
   }, {
     id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
+    name: 'Clubs',
+    lastText: '23 Places',
+    face: 'img/icons/android-bar.svg',
+    item_bg: 'club'
   }, {
     id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
+    name: 'Garage',
+    lastText: '3 Places',
+    face: 'img/icons/android-car.svg',
+    item_bg: 'garage'
   }, {
     id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'https://pbs.twimg.com/profile_images/598205061232103424/3j5HUXMY.png'
+    name: 'Restaurants',
+    lastText: '14 Places',
+    face: 'img/icons/fork.svg',
+    item_bg: 'rest'
   }, {
     id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'https://pbs.twimg.com/profile_images/578237281384841216/R3ae1n61.png'
+    name: 'Parks',
+    lastText: '9 Places',
+    face: 'img/icons/android-bicycle.svg',
+    item_bg: 'park'
   }];
 
   return {

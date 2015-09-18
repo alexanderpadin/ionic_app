@@ -1,23 +1,39 @@
-<ion-view view-title="Home">
+<ion-view view-title="Home" hide-nav-bar="true">
+
+<div class="bar bar-dark item-input-inset">
+  <h1 ng-hide="search" class="title">Home</h1>
+
+  <label class="item-input-wrapper">
+    <i ng-show="search" style="color: #771107 !important;" class="icon ion-ios-search placeholder-icon"></i>
+    <input ng-show="search" type="search" ng-model="searchAddressText" 
+      placeholder="Search" ng-change="searchAddress(searchAddressText)">
+  </label>
+
+
+  <button ng-click="search = !search" 
+    ng-class=" (search) ? 'button button-clear' : 'button icon button-clear ion-ios-search'">
+    {{search ? 'Cancel' : ''}}
+  </button>
+</div>
+
   <ion-content>
-
     <div id="map" data-tap-disabled="true"></div>
-
     <div class="list_items">
       <ion-list>
-        <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in chat" type="item-text-wrap" href="#/tab/chats/{{item.id}}">
-          <img ng-src="{{item.face}}">
-          <h2>{{item.name}}</h2>
-          <p>{{item.lastText}}</p>
-          <i class="icon ion-chevron-right icon-accessory"></i>
+        <ion-item class="custom-color item-remove-animate item-avatar item-icon-right" 
+            ng-repeat="item in chat" type="item-text-wrap" ng-click="goto('#/tab/chats/{{item.id}}');">
 
-          <ion-option-button class="button-assertive" ng-click="remove(chat)">
-            Delete
-          </ion-option-button>
+          <img src="{{item.face}}">
+          <h2 style="color : #FFFFFF;">{{item.name}}</h2>
+          <p style="color : #FFFFFF;">{{item.lastText}}</p>
+          <i style="color : #FFFFFF;" class="icon ion-chevron-right icon-accessory"></i>
+
+         <!--  href="#/tab/chats/{{item.id}}" -->
         </ion-item>
       </ion-list>
     </div>
 
+    <img src="pin_icon_placed.png" id="change_icon" class="img/map_pin_placed">
 
   </ion-content>
 </ion-view>
