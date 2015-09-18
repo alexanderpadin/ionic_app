@@ -1,18 +1,16 @@
 <ion-view view-title="Places">
-
-<div class="bar bar-dark item-input-inset">
-  <h1 ng-hide="search" class="title">Places</h1>
-</div>
-
+<ion-header-bar align-title="center" class="bar-dark">  
+  <h1 class="title">Places</h1>
+</ion-header-bar>
 
   <ion-content>
     <ion-list>
-    <ion-item style="color : #FFFFFF;" class="item-remove-animate item-avatar item-icon-right"  
-    	ng-repeat="item in chats" id="{{item.item_bg}}" ng-click="goto('#/tab/chats/{{item.id}}');">
-        <i class="icon ion-home custom-icon"></i>
-        <!-- <img ng-src="{{item.face}}"> -->
-        <h2 style="color : #FFFFFF;">{{item.name}}</h2>
-        <p style="color : #FFFFFF;">{{item.lastText}}</p>
-    </ion-item>
+	    <ion-item style="color : #FFFFFF;" class="item-remove-animate item-avatar item-icon-right"  
+	    	ng-repeat="item in chats" id="{{item.item_bg}}" ng-click="goto('#/tab/chats/{{item.id}}');">
+	        <img ng-src="{{item.face}}">
+	        <h2 style="color : #FFFFFF;">{{item.name}}</h2>
+	        <p style="color : #FFFFFF;">{{item.lastText}}</p>
+	    </ion-item>
+	</ion-list>
   </ion-content>
 </ion-view>

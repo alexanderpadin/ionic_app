@@ -15,8 +15,8 @@
 
 #home { 
   background-image: url('../img/bg/home.png');
-  background-repeat: no-repeat;
-  height: 150px;
+/*  background-repeat: no-repeat;*/  
+height: 120px;
   background-size: 100%;
   border-style: solid;
   border-bottom-width: 5px;
@@ -24,8 +24,8 @@
 }
 #club { 
   background-image: url('../img/bg/clubs.png');
-  background-repeat: no-repeat;
-  height: 150px;
+/*  background-repeat: no-repeat;
+*/  height: 120px;
   background-size: 100%;
   border-style: solid;
   border-bottom-width: 5px;
@@ -33,8 +33,8 @@
 }
 #garage { 
   background-image: url('../img/bg/garage.png');
-  background-repeat: no-repeat;
-  height: 150px;
+/*  background-repeat: no-repeat;
+*/  height: 120px;
   background-size: 100%;
   border-style: solid;
   border-bottom-width: 5px;
@@ -42,8 +42,8 @@
 }
 #rest { 
   background-image: url('../img/bg/restaurant.png');
-  background-repeat: no-repeat;
-  height: 150px;
+/*  background-repeat: no-repeat;
+*/  height: 120px;
   background-size: 100%;
   border-style: solid;
   border-bottom-width: 0px;
@@ -51,8 +51,8 @@
 }
 #park { 
   background-image: url('../img/bg/park.png');
-  background-repeat: no-repeat;
-  height: 150px;
+  /*background-repeat: no-repeat;*/
+  height: 120px;
   border-style: solid;
   border-bottom-width: 5px;
   border-color: #2E2E2E

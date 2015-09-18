@@ -5,13 +5,13 @@ angular.module('starter.services', [])
     id: 0,
     name: 'Homes',
     lastText: '7 Places',
-    face: 'img/icons/android-home.svg',
+    face: 'img/icons/ios-home.svg',
     item_bg: 'home'
   }, {
     id: 1,
     name: 'Clubs',
     lastText: '23 Places',
-    face: 'img/icons/android-bar.svg',
+    face: 'img/icons/beer.svg',
     item_bg: 'club'
   }, {
     id: 2,
@@ -23,7 +23,7 @@ angular.module('starter.services', [])
     id: 3,
     name: 'Restaurants',
     lastText: '14 Places',
-    face: 'img/icons/fork.svg',
+    face: 'img/icons/android-restaurant.svg',
     item_bg: 'rest'
   }, {
     id: 4,

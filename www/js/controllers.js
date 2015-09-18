@@ -96,7 +96,7 @@ app.controller('DashCtrl', function($scope, $ionicLoading, $compile, $stateParam
          $window.location.href = path;
       };
 
-      $scope.centerOnMe();   
+      //$scope.centerOnMe();   
 })
 
 app.controller('ChatsCtrl', function($scope, $window, Chats) {
