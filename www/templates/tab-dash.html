@@ -1,6 +1,6 @@
-<ion-view view-title="Home" hide-nav-bar="true">
+<ion-view view-title="Home">
 
-<div class="bar bar-dark item-input-inset">
+<div class="bar bar-assertive bar-header item-input-inset">
   <h1 ng-hide="search" class="title">Home</h1>
 
   <label class="item-input-wrapper">
@@ -21,12 +21,12 @@
     <div class="list_items">
       <ion-list>
         <ion-item class="custom-color item-remove-animate item-avatar item-icon-right" 
-            ng-repeat="item in chat" type="item-text-wrap" ng-click="goto('#/tab/chats/{{item.id}}');">
+            ng-repeat="item in chat" type="item-text-wrap" ng-click="alert('navegate to place')">
 
           <img src="{{item.face}}">
           <h2 style="color : #FFFFFF;">{{item.name}}</h2>
           <p style="color : #FFFFFF;">{{item.lastText}}</p>
-          <i style="color : #FFFFFF;" class="icon ion-chevron-right icon-accessory"></i>
+          <i style="color : #FFFFFF;" class="icon ion-navigate icon-accessory"></i>
 
          <!--  href="#/tab/chats/{{item.id}}" -->
         </ion-item>

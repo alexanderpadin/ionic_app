@@ -9,53 +9,39 @@
   height: 100%;
 }
 
-.pane {
+/*.pane {
     background-color: #2E2E2E;
-}
+}*/
 
 #home { 
   background-image: url('../img/bg/home.png');
 /*  background-repeat: no-repeat;*/  
-height: 120px;
+  height: 120px;
   background-size: 100%;
-  border-style: solid;
-  border-bottom-width: 5px;
-  border-color: #2E2E2E;
 }
 #club { 
   background-image: url('../img/bg/clubs.png');
 /*  background-repeat: no-repeat;
 */  height: 120px;
   background-size: 100%;
-  border-style: solid;
-  border-bottom-width: 5px;
-  border-color: #2E2E2E;
 }
 #garage { 
   background-image: url('../img/bg/garage.png');
 /*  background-repeat: no-repeat;
 */  height: 120px;
   background-size: 100%;
-  border-style: solid;
-  border-bottom-width: 5px;
-  border-color: #2E2E2E;
 }
 #rest { 
   background-image: url('../img/bg/restaurant.png');
 /*  background-repeat: no-repeat;
 */  height: 120px;
   background-size: 100%;
-  border-style: solid;
-  border-bottom-width: 0px;
-  border-color: #2E2E2E;
 }
 #park { 
   background-image: url('../img/bg/park.png');
   /*background-repeat: no-repeat;*/
   height: 120px;
-  border-style: solid;
-  border-bottom-width: 5px;
-  border-color: #2E2E2E
+  background-size: 100%;
 }
 
 /*.custom-icon {
@@ -63,20 +49,20 @@ height: 120px;
   color : #FFFFFF;
 }
 */
-.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+/*.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
     opacity: 1;
 }
 .tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
     color: #771107;
-}
+}*/
 
 /*
 Header bar color
 */
-.bar {
+/*.bar {
   background-color: #771107 !important;
   border-color: #771107 !important;
-}
+}*/
 
 /*
 Items colors
@@ -104,6 +90,12 @@ Items colors
   left: 50%;
   margin-top: -70px; /* Half the height */
   margin-left: -22.5px;
+}
+
+.shadow-bottom {
+  -webkit-box-shadow: 0 3px 15px -5px black;
+  -moz-box-shadow: 0 3px 15px -5px black;
+  box-shadow: 0 3px 15px -5px black;
 }
 
 .list_items {
